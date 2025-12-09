@@ -8,18 +8,16 @@ interface SettingsProps {
 }
 
 const GROQ_MODELS = [
-  { id: 'llama-3.1-70b-versatile', name: 'Llama 3.1 70B' },
-  { id: 'llama-3.1-8b-instant', name: 'Llama 3.1 8B' },
-  { id: 'llama-3.2-90b-text-preview', name: 'Llama 3.2 90B' },
-  { id: 'mixtral-8x7b-32768', name: 'Mixtral 8x7B' },
-  { id: 'gemma2-9b-it', name: 'Gemma 2 9B' },
+  { id: 'llama-3.1-8b-instant', name: 'Llama 3.1 8B Instant' },
+  { id: 'llama-3.3-70b-versatile', name: 'Llama 3.3 70B Versatile' },
+  { id: 'openai/gpt-oss-120b', name: 'GPT OSS 120B' },
 ];
 
 export const Settings = ({ onClose }: SettingsProps) => {
   const { profile, updateProfile } = useAuth();
   const { theme, toggleTheme } = useTheme();
   const [apiKey, setApiKey] = useState(profile?.groq_api_key || '');
-  const [selectedModel, setSelectedModel] = useState(profile?.selected_model || 'llama-3.1-70b-versatile');
+  const [selectedModel, setSelectedModel] = useState(profile?.selected_model || 'llama-3.3-70b-versatile');
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
 

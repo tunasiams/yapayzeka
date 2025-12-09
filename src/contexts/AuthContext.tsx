@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         id: data.user.id,
         email: data.user.email!,
         theme: 'light',
-        selected_model: 'llama-3.1-70b-versatile',
+        selected_model: 'llama-3.3-70b-versatile',
       });
     }
 
